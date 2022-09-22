@@ -18,14 +18,14 @@ int main(){
     printf("Digite a altura: ");
     scanf("%f", &altura);
 
-    if (sexo == "M"){
+    if (sexo == 'H'){
 
         resultado = (72.7 * altura) - 58;
-        printf("O resultado e: %.1f(%f)", resultado);
+        printf("O resultado e: (%f)", resultado);
     }
     else{
 
         resultado = (62.1 * altura) - 44.7;
-        printf("O resultado e: %.1f(%f)", resultado);
+        printf("O resultado e: (%f)", resultado);
     }
 }
