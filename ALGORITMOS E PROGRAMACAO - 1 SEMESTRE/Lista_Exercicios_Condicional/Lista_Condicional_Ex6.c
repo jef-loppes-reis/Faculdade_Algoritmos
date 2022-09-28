@@ -1,20 +1,31 @@
-#include<stdio.h>
-#define homens 72.7, mulheres 62.1
+#include <stdio.h>
+#define homem 72.7
+#define mulher 62.1
 
 main(){
 
-    float altura, peso_ideal, resultado_homen, resultado_mulher;
-    char sexo;
+    float altura, resultado;
+    char sexo[10];
 
-    prinf("Digite a altura: ");
+    printf("\nDigite a altura: ");
     scanf("%f", &altura);
-    
-    printf("\nDigite o sexo: ");
+
+    printf("Digite o Sexo: ");
     scanf("%s", &sexo);
 
-    if (sexo == "M" | sexo == "mulher")
-    resultado_homen = (homens * altura) - 58;
+    if (sexo == "F" || sexo == "mulher" || sexo == "f"){
+        
+        resultado = (mulher * altura) - 44.7;
+        printf("\nPessoa do Sexo: %s", sexo);
+        printf("\nAltura: %f", altura);
+        printf("\nPeso ideal: %f", resultado);
+    }
 
-    resultado_mulher = (mulheres * altura) - 44.7;
-
+    else{
+        resultado = (homem * altura) - 58;
+        printf("\nPessoa do Sexo: %s", sexo);
+        printf("\nAltura: %f", altura);
+        printf("\nPeso ideal: %f", resultado);
+    }
+    return 0;
 }
