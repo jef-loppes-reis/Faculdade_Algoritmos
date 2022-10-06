@@ -1,10 +1,9 @@
-#include<string.h>
+#include<stdio.h>
 #include<math.h>
 
 int main(){
 
-    float numero1, numero2, soma, sub, div, mult, raiz, potencia;
-    int expoente;
+    int numero1, numero2;
     char oper;
 
     printf("Digite o primeiro numero: ");
@@ -12,19 +11,21 @@ int main(){
 
     printf("Digite o segundo numero: ");
     scanf("%f", &numero2);
-
-    printf("Digite a operacao: ");
+    
+    printf("Digite a opereçao: ");
     scanf("%s", &oper);
 
     switch (oper){
 
-        case 'soma': numero1 + numero2; break;
-        case 'sub': numero1 - numero2; break;
-        case 'div': numero1 / numero2; break;
-        case 'mult': numero1 * numero2; break;
-        case 'raiz': sqrt(numero1); break;
-        case 'portencia': printf("Digite o expoente: "); scanf("%d", &expoente); pow(numero1, expoente); break;
+        case '+': printf("%d", numero1 + numero2); break;
+        case '-': printf("%d", numero1 - numero2); break;
+        case '/': printf("%d", numero1 / numero2); break;
+        case '*': printf("%d", numero1 * numero2); break;
+        case 'r': printf("%f", sqrt(numero1)); break;
+        case 'p': printf("%f", pow(numero1, numero2)); break;
         
-        default: print("Algo deu errado !"); break;
+        default: printf("Algo deu errado !"); break;
     }
+    
+    return 0;
 }
